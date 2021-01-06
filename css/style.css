@@ -1,0 +1,126 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background: #000000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  font-size: 16px;
+  font-family: 'Libre Baskerville', serif;
+  line-height: 20px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+nav  a:hover{
+  text-decoration: underline;
+}
+
+h1{
+  font-size: 2rem;
+}
+h3{
+  font-size: 0.9rem;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  background-color: rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+nav{
+  padding-right: 40px;
+}
+header>nav>ul>li{
+  display: inline;
+  margin-left: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.result{
+  width: 50%;
+  height:100px;
+  padding: 20px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#displayInput, #displayResult{
+  margin: 5px 10px;
+}
+
+.calculator{
+  padding-top: 40px;
+  display: flex;
+  width: 50%;
+  flex-flow: row wrap;
+}
+
+.inputTaker{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.inputTaker>input{
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.ops{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 20px;
+}
+
+div{
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.1);
+}
+.ops div :hover{
+  background:rgba(255,255,255,0.5);
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
